@@ -11,6 +11,6 @@ class RedirectController extends Controller
     {
         $url = Url::where('back_half', $back_half)->firstOrFail();
         $url->increment('clicks', 1);
-        return redirect($url->long_link);
+        return redirect($url->secure_long_link());
     }
 }

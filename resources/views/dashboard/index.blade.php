@@ -65,7 +65,7 @@
                         <div wire:key='{{ $url->id }}' class="card bg-base-100 border-[1px] w-full">
                             <div class="card-body gap-1">
                                 <div class="flex justify-between">
-                                    <a href="{{ $url->long_link }}" class="text-xl font-bold hover:underline">
+                                    <a href="{{ $url->secure_long_link() }}" class="text-xl font-bold hover:underline">
                                         {{ $url->title() }}
                                     </a>
                                     <div class="flex items-center gap-2">
@@ -96,8 +96,9 @@
                                 <a href="https://uurl.my.id/{{ $url->back_half }}"
                                     class="text-blue-500 hover:underline font-semibold"
                                     target="_blank">uurl.my.id/{{ $url->back_half }}</a>
-                                <a href="{{ $url->long_link }}" class="text-xs line-clamp-1	 hover:underline font-semibold"
-                                    target="_blank">{{ $url->long_link }}</a>
+                                <a href="{{ $url->secure_long_link() }}"
+                                    class="text-xs line-clamp-1	 hover:underline font-semibold"
+                                    target="_blank">{{ $url->secure_long_link() }}</a>
                                 <div class="flex gap-4 items-center text-xs mt-5">
                                     <div class="flex gap-1 items-center text-green-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
