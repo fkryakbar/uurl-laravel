@@ -24,4 +24,4 @@ Route::get('/logout', function (Request $request) {
     return redirect('/login');
 });
 Route::get('/dashboard', Dashboard::class)->middleware('auth');
-Route::get('/{back_half}', [RedirectController::class, 'index'])->middleware('auth');
+Route::get('/{back_half}', [RedirectController::class, 'index']);
