@@ -59,9 +59,9 @@
                     </div>
                 </form>
             </div>
-            <div class="shadow bg-white rounded-lg p-5">
+            <div class="shadow bg-white rounded-lg p-5 mb-5">
                 <div class="flex gap-3 flex-wrap">
-                    @foreach ($urls as $url)
+                    @forelse ($urls as $url)
                         <div wire:key='{{ $url->id }}' class="card bg-base-100 border-[1px] w-full">
                             <div class="card-body gap-1">
                                 <div class="flex justify-between">
@@ -121,7 +121,12 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="mx-auto lg:w-[50%] w-[70%]">
+                            <img src="/Empty-rafiki.svg" alt="Empty">
+                            <p class="text-center text-xs text-slate-500">Short a link to make one</p>
+                        </div>
+                    @endforelse
                 </div>
             </div>
         </div>
