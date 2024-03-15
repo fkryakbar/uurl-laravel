@@ -28,6 +28,10 @@ class Login extends Component
 
     public function render()
     {
+        if (Auth::check()) {
+            $this->redirect('/dashboard');
+        }
+
         return view('login.index');
     }
 }
