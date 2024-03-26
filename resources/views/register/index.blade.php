@@ -22,7 +22,16 @@
                     <span>{{ session('success') }}</span>
                 </div>
             @endif
-            <form wire:submit='submit' class="mt-5" autocomplete="off">
+            <a href="/auth/redirect">
+                <div class="my-3 flex justify-center items-center gap-2 rounded-lg border-[1px] p-3 hover:bg-slate-100">
+                    <img src="/google.png" alt="google icon" class="w-7">
+                    <p class="text-sm">
+                        Continue With Google
+                    </p>
+                </div>
+            </a>
+            <p class="text-center">OR</p>
+            <form wire:submit='submit' autocomplete="off">
                 <div class="form-control w-full max-w-xs">
                     <label class="label">
                         <span class="label-text">Name</span>
